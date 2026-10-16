@@ -8,7 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://agilix.id";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ;
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
