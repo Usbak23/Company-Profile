@@ -61,9 +61,40 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Agilix IT Solutions",
+  url: baseUrl,
+  logo: `${baseUrl}/agilix-logo.png`,
+  description: "Premium web solutions and enterprise IT architecture for the modern digital landscape.",
+  telephone: "+62-895-3244-35347",
+  email: "agilixsan@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Komp. Inkopad, Kec. Tajurhalang",
+    addressLocality: "Bogor",
+    postalCode: "16320",
+    addressCountry: "ID",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+62-895-3244-35347",
+    contactType: "customer service",
+    areaServed: "ID",
+    availableLanguage: ["Indonesian", "English"],
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <LanguageProvider>
           {children}
