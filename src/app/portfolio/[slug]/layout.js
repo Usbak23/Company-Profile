@@ -25,3 +25,4 @@ export async function generateMetadata({ params }) {
 export default function ProjectDetailLayout({ children }) {
   return children;
 }
+
