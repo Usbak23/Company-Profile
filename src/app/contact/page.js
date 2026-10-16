@@ -8,10 +8,10 @@ import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 
 // ─── EmailJS credentials ─────────────────────────────────────────────────────
-// Ganti ketiga nilai di bawah ini setelah setup di emailjs.com
-const EMAILJS_SERVICE_ID  = "service_hc8keeu";
-const EMAILJS_TEMPLATE_ID = "template_40uh0q6";
-const EMAILJS_PUBLIC_KEY  = "4RHYu6BokF1w9g0ik";
+// Nilai dibaca dari .env.local (NEXT_PUBLIC_EMAILJS_*)
+const EMAILJS_SERVICE_ID  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ;
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ;
+const EMAILJS_PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ;
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default function ContactPage() {
