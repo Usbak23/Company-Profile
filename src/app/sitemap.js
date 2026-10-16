@@ -10,6 +10,8 @@ export default async function sitemap() {
     "/services",
     "/portfolio",
     "/contact",
+    "/privacy",
+    "/terms",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

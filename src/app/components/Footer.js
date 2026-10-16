@@ -26,9 +26,9 @@ export default function Footer() {
         <div className="footer__col">
           <h4 className="footer__col-title">{t.footer.legal}</h4>
           <div className="footer__col-list">
-            <Link href="#" className="footer__col-link">{t.footer.privacy}</Link>
-            <Link href="#" className="footer__col-link">{t.footer.terms}</Link>
-            <Link href="#" className="footer__col-link">{t.footer.cookies}</Link>
+            <Link href="/privacy" className="footer__col-link">{t.footer.privacy}</Link>
+            <Link href="/terms" className="footer__col-link">{t.footer.terms}</Link>
+            <Link href="/privacy" className="footer__col-link">{t.footer.cookies}</Link>
           </div>
         </div>
         <div className="footer__col">
