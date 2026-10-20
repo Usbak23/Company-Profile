@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
@@ -24,9 +25,12 @@ export default function Header() {
   return (
     <header className="header">
       <Link href="/" className="header__brand" onClick={closeMenu}>
-        <img
+        <Image
           src="/agilix-logo.png"
           alt="Agilix Tech Logo"
+          width={36}
+          height={36}
+          priority
           className="header__brand-logo"
         />
         <span>Agilix</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 
@@ -12,9 +13,11 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__left">
         <div className="footer__brand">
-          <img
+          <Image
             src="/agilix-logo.png"
             alt="Agilix Tech Logo"
+            width={40}
+            height={40}
             className="footer__brand-logo"
           />
           <span>Agilix Tech</span>

@@ -1,6 +1,3 @@
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
-
 :root {
   /* Colors */
   --color-bg-base: #060b19;
@@ -22,6 +19,7 @@
 
   /* Typography */
   --font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-space-grotesk: var(--font-space-grotesk), 'Space Grotesk', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
