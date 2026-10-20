@@ -1,4 +1,5 @@
 import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { LanguageProvider } from "./context/LanguageContext";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -14,6 +15,13 @@ const inter = Inter({
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const clashDisplay = localFont({
+  src: "./fonts/ClashDisplay-Bold.woff2",
+  variable: "--font-clash-display",
+  weight: "700",
   display: "swap",
 });
 
@@ -113,13 +121,8 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${clashDisplay.variable}`}>
       <head>
-        <link rel="preconnect" href="https://api.fontshare.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
