@@ -923,6 +923,7 @@ img {
       padding: var(--spacing-lg) var(--spacing-md);
       text-align: center;
       gap: var(--spacing-lg);
+      min-height: auto;
   }
 
   .hero__title {
@@ -1199,6 +1200,22 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
+}
+
+.milestones__grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .milestones__grid--3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .milestones__grid--3col {
+    grid-template-columns: 1fr;
+  }
 }
 
 .milestone-card {

@@ -243,6 +243,7 @@ export default function ProjectDetailPage({ params }) {
                         height={225}
                         className="pd-v2-thumb-img"
                         loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 400px"
                       />
                       <div className="pd-v2-thumb-overlay">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">

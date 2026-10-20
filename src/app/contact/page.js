@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useLanguage } from "../context/LanguageContext";
@@ -28,6 +27,7 @@ export default function ContactPage() {
     setErrorMsg("");
 
     try {
+      const { default: emailjs } = await import("@emailjs/browser");
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,

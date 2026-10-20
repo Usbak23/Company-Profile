@@ -38,17 +38,17 @@ export default function Home() {
           </div>
           <div className="hero__visual">
             <div className="hero__image-wrapper">
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M20 50 L50 20 L80 50 L50 80 Z' fill='none' stroke='%234FD1C5' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%235A4FCF' opacity='0.8'/%3E%3C/svg%3E")`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                }}
+              <svg
+                viewBox="0 0 100 100"
+                width="100%"
+                height="100%"
+                role="img"
                 aria-label="Abstract technology framework visualization"
-              />
+                style={{ width: '80%', height: '80%', margin: 'auto' }}
+              >
+                <path d="M20 50 L50 20 L80 50 L50 80 Z" fill="none" stroke="#4FD1C5" strokeWidth="2" opacity="0.5" />
+                <circle cx="50" cy="50" r="10" fill="#5A4FCF" opacity="0.8" />
+              </svg>
             </div>
           </div>
         </section>

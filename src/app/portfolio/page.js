@@ -149,7 +149,8 @@ export default function PortfolioPage() {
                           alt={project.title}
                           width={600}
                           height={340}
-                          sizes="(max-width: 768px) 100vw, 600px"
+                          priority={i === 0}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="pf-card__cover-img"
                         />
                       ) : (

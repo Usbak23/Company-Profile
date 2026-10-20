@@ -50,7 +50,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="milestones__grid" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+          <div className="milestones__grid milestones__grid--3col">
             <div className="milestone-card">
               <div className="milestone-card__top">
                 <span className="milestone-card__step">01</span>
