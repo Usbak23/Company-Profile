@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translations";
 import { getProjects } from "../data/projects";
@@ -143,9 +144,12 @@ export default function PortfolioPage() {
                     >
                       {project.coverImage ? (
                         /* Real screenshot cover */
-                        <img
+                        <Image
                           src={project.coverImage}
                           alt={project.title}
+                          width={600}
+                          height={340}
+                          sizes="(max-width: 768px) 100vw, 600px"
                           className="pf-card__cover-img"
                         />
                       ) : (

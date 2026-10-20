@@ -3,6 +3,7 @@
 import { use, useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useLanguage } from "../../context/LanguageContext";
@@ -122,9 +123,13 @@ export default function ProjectDetailPage({ params }) {
             >
               {project.coverImage ? (
                 <div className="pd-v2-screenshot-viewport">
-                  <img
+                  <Image
                     src={project.coverImage}
                     alt={`${project.title} screenshot`}
+                    width={1200}
+                    height={675}
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 1024px"
                     className="pd-v2-preview-img"
                   />
                   <div className="pd-v2-preview-overlay">
@@ -231,9 +236,11 @@ export default function ProjectDetailPage({ params }) {
                   </div>
                   <div className="pd-v2-thumb-body">
                     <div className="pd-v2-thumb-img-wrap">
-                      <img
+                      <Image
                         src={shot.src}
                         alt={shot.caption}
+                        width={400}
+                        height={225}
                         className="pd-v2-thumb-img"
                         loading="lazy"
                       />
